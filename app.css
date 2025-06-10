@@ -1,0 +1,147 @@
+/* Fondo general */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #ffeef8;
+  color: #4a4a4a;
+}
+
+/* Contenedor principal */
+.chatContainer {
+  display: flex;
+  height: 100vh;
+}
+
+/* Encabezado */
+.chatHeader {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #ff69b4;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  z-index: 1;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.chatLogo {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.chatTitle {
+  font-size: 24px;
+  margin: 0;
+}
+
+/* Barra lateral */
+.sidebar {
+  width: 220px;
+  background-color: #ffd1e8;
+  padding-top: 80px;
+  box-shadow: 2px 0 4px rgba(0, 0, 0, 0.05);
+}
+
+.currentUser {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px;
+  font-weight: bold;
+  background-color: #ffc0da;
+  border-radius: 0 10px 10px 0;
+}
+
+.avatar {
+  font-size: 24px;
+}
+
+/* Lista de chats */
+.chatList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.chatItem {
+  padding: 12px 20px;
+  cursor: pointer;
+  border-left: 4px solid transparent;
+  transition: 0.3s;
+}
+
+.chatItem:hover,
+.chatItem.active {
+  background-color: #ffe6f2;
+  border-left: 4px solid #ff69b4;
+}
+
+/* Área de mensajes */
+.chatArea {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-left: 220px;
+  padding: 80px 20px 20px;
+}
+
+.messages {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow-y: auto;
+  padding: 10px;
+}
+
+/* Estilo de mensajes */
+.message {
+  padding: 10px 15px;
+  border-radius: 15px;
+  max-width: 60%;
+  word-wrap: break-word;
+  font-size: 15px;
+}
+
+.incoming {
+  background-color: white;
+  align-self: flex-start;
+}
+
+.outgoing {
+  background-color: #ffb6d9;
+  align-self: flex-end;
+  color: white;
+}
+
+/* Input de mensaje */
+.messageInput {
+  display: flex;
+  margin-top: 10px;
+  gap: 10px;
+}
+
+.messageInput input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ffc2dc;
+  border-radius: 20px;
+  outline: none;
+}
+
+.messageInput button {
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.messageInput button:hover {
+  background-color: #ff4ca0;
+}
